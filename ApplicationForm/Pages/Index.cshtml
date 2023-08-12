@@ -1,0 +1,85 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+<header>
+<h1 id="title" class="text-center"> Application Form </h1>
+<p id="description" class="description text-center">
+ Please fill out the required fields below and click on the "Submit" button to send your message </p>
+</header>
+<form id="survey-form">
+<div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+        </div>
+<div class="form-group">
+          <label id="surname-label" for="name">Surname</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+        </div>
+   <div class="form-group">
+   <label id="email-label" for="email">Email</label>
+<input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required="">
+</div>
+<div class="form-group">
+<label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+<input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
+</div>
+<div class="form-group">
+<p>Your ethnic group</p>
+<select id="dropdown" name="role" class="form-control" required="">
+<option disabled="" selected="" value="">Select one</option>
+<option value="student">White</option>
+<option value="student">Mixed</option>
+<option value="job">Asian or Asian British</option>
+<option value="learner">Black or British Black</option>
+<option value="preferNo">Prefer not to say</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-group">
+<p>Would you like to work</p>
+<label>
+<input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">Full time
+</label>
+<label>
+<input name="user-recommend" value="maybe" type="radio" class="input-radio">Part time</label>
+<label><input name="user-recommend" value="not-sure" type="radio" class="input-radio">Full time remote</label>
+</div>
+<div class="form-group">
+<p>What is your Salary expectation?</p>
+<select id="most-like" name="mostLike" class="form-control" required="">
+<option disabled="" selected="" value="">Select an option</option>
+<option value="challenges">18K-22K</option>
+<option value="projects">22K-25K</option>
+<option value="community">25K-30K</option>
+<option value="openSource">30K-35K</option>
+</select>
+</div>
+<div class="form-group">
+<p>What would you like to work with?
+ <span class="clue">(Check all that apply)</span>
+</p>
+<label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">C#</label>
+ <label>
+<input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Javascript</label>
+ <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Python</label>
+<label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox">HTML & CSS</label>
+ <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">SQL Database Management</label>
+ <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Bootstrap</label>
+ <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Blazer</label>
+ <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">React</label>
+<label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Other</label>
+</div>
+ <div class="form-group">
+<p>Any message to employer?</p>
+<textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your message here..."></textarea>
+</div>
+<div class="form-group">
+<button type="submit" id="submit" class="submit-button">
+Submit</button>
+ </div>
+</form>
+</div>
